@@ -1,8 +1,16 @@
-public class Cliente {
+public class Cliente implements Autenticacao {
     private String nome;
-    private String profissão;
+    private String profissao;
     private String CPF;
+    private int senha = 1111;
 
+    public boolean autenticar(int senha) {
+        return this.senha == senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
 
     public String getNome() {
         return nome;
@@ -20,11 +28,11 @@ public class Cliente {
         this.CPF = CPF;
     }
 
-    public String getProfissão() {
-        return profissão;
+    public String getProfissao() {
+        return profissao;
     }
 
-    public void setProfissão(String profissão) {
-        this.profissão = profissão;
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
     }
 }

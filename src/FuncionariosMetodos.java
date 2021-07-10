@@ -1,13 +1,14 @@
 public class FuncionariosMetodos {
 
     public static void main(String[] args) {
-        // Criando e testando o primeiro funcionário
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("Amanda Silva");
-        funcionario.setCPF("222.222.222-20");
-        funcionario.setSalario(1500.00);
+        // Criando e testando o primeiro funcionário do tipo Administrador.
+        // Não foi criado nenhum funcionário do tipo Funcionário, já que esse é abstrato.
+        Administrador administrador = new Administrador();
+        administrador.setNome("Amanda Silva");
+        administrador.setCPF("222.222.222-20");
+        administrador.setSalario(1500.00);
 
-        System.out.println("O bônus do funcionário é " + funcionario.getBonus());
+        System.out.println("O bônus do funcionário é " + administrador.getBonus());
 
         // Criando e testando um gerente
         Gerente gerente = new Gerente();
@@ -25,8 +26,13 @@ public class FuncionariosMetodos {
 
 // Conferindo soma das bonificações
         Bonus controleBonus = new Bonus();
-        controleBonus.registra(funcionario);
+        controleBonus.registra(administrador);
         controleBonus.registra(gerente);
         System.out.println("O total dos bônus da empresa é " + controleBonus.getSoma());
+
+        // Conferir sistema de autenticação do Cliente
+        Cliente cliente = new Cliente();
+        boolean autenticarcliente = cliente.autenticar(1111);
+        System.out.println(autenticarcliente);
     }
 }

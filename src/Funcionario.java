@@ -1,11 +1,10 @@
-public class Funcionario {
+
+public abstract class Funcionario {
     private String nome;
     private String CPF;
     private double salario;
 
-    public double getBonus (){
-        return this.salario * 0.1;
-    }
+    public abstract double getBonus ();
 
     public String getNome() {
         return nome;
