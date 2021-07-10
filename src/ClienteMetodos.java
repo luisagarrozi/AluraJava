@@ -27,14 +27,14 @@ public class ClienteMetodos {
         Cliente luisa = new Cliente();
         luisa.setNome("Luisa Garrozi de Oliveira");
         luisa.setCPF("000.000.000-00");
-        luisa.setProfissão("estudante");
+        luisa.setProfissao("estudante");
 
         // Associa a conta a um cliente
         minhaConta.setTitular(luisa);
         System.out.println("Essa é a conta de " + luisa.getNome() + ", do CPF " + luisa.getCPF());
         
         // Alterar a profissão do dono da conta minhaConta
-        minhaConta.getTitular().setProfissão("programadora");
+        minhaConta.getTitular().setProfissao("programadora");
 
         // Ver o total de contas criadas até o momento
         System.out.println("O total de contas criadas até o momento é " + Conta.getTotaldecontas());
