@@ -17,9 +17,6 @@ public class FuncionariosMetodos {
         gerente.setSalario(5000.00);
         gerente.setSenha(2222);
 
-        // Autenticação de senha
-        boolean autenticar = gerente.autenticar(2222);
-        System.out.println(autenticar);
 
         // Testando bonificação
         System.out.println("O bônus do gerente é " + gerente.getBonus());
@@ -29,6 +26,10 @@ public class FuncionariosMetodos {
         controleBonus.registra(administrador);
         controleBonus.registra(gerente);
         System.out.println("O total dos bônus da empresa é " + controleBonus.getSoma());
+
+        // Autenticação de senha do gerente
+        boolean autenticar = gerente.autenticar(2222);
+        System.out.println(autenticar);
 
         // Conferir sistema de autenticação do Cliente
         Cliente cliente = new Cliente();
